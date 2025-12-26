@@ -150,7 +150,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">商品詳情</h2>
 
                 <div className="bg-gray-50 rounded-2xl p-6 sm:p-8">
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-gray-700 leading-relaxed whitespace-pre-line">
                         {page.description}
                     </p>
                 </div>
