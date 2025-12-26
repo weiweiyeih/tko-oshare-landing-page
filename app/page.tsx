@@ -2,112 +2,141 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-16 md:py-24">
+        <div className="flex flex-col items-center text-center">
+          {/* Hero Image Placeholder */}
+          <div className="w-full max-w-4xl mb-12 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 aspect-video flex items-center justify-center">
+            <div className="text-white p-8">
+              <svg
+                className="w-32 h-32 mx-auto mb-4 opacity-90"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <p className="text-2xl font-bold">專業設計 · 完美呈現</p>
+              <p className="text-xl mt-2">Professional Design · Perfect Presentation</p>
+            </div>
+          </div>
+
+          {/* Main Heading - Traditional Chinese */}
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+            打造您的專屬頁面
+          </h1>
+
+          {/* Main Heading - English */}
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-700 dark:text-gray-300 mb-8 leading-tight">
+            Create Your Perfect Landing Page
+          </h2>
+
+          {/* Description */}
+          <div className="max-w-3xl space-y-6 text-lg md:text-xl text-gray-700 dark:text-gray-300">
+            {/* Traditional Chinese */}
+            <p className="leading-relaxed">
+              我們專門協助客戶設計與架設高品質的著陸頁面與產品頁面。
+              <br />
+              無論您是新創公司、個人品牌，還是成熟企業，
+              <br />
+              我們都能為您量身打造專業且吸引人的網頁解決方案。
+            </p>
+
+            {/* English */}
+            <p className="leading-relaxed text-gray-600 dark:text-gray-400">
+              We help customers design and host their landing pages and product pages.
+              <br />
+              Whether you're a startup, personal brand, or established business,
+              <br />
+              we create professional and engaging web solutions tailored to your needs.
+            </p>
+          </div>
+
+          {/* Services Highlight */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 w-full max-w-5xl">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🎨</div>
+              <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">客製化設計</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">Custom Design</p>
+              <p className="text-sm text-gray-500 dark:text-gray-500">
+                符合品牌形象的獨特設計
+                <br />
+                Unique designs that match your brand
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">快速部署</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">Fast Deployment</p>
+              <p className="text-sm text-gray-500 dark:text-gray-500">
+                專業託管服務，即刻上線
+                <br />
+                Professional hosting, launch immediately
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">📱</div>
+              <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">響應式設計</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-3">Responsive Design</p>
+              <p className="text-sm text-gray-500 dark:text-gray-500">
+                完美適配所有裝置
+                <br />
+                Perfect on all devices
+              </p>
+            </div>
+          </div>
+
+          {/* Contact Section */}
+          <div className="mt-20 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-10 rounded-2xl shadow-2xl max-w-3xl w-full">
+            <h3 className="text-3xl font-bold mb-4">對我們的服務感興趣？</h3>
+            <p className="text-2xl mb-6">Interested in our services?</p>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4">
+              <p className="text-lg mb-2 font-semibold">聯絡我們 | Contact Us</p>
+              <a
+                href="mailto:takaocybercorner@gmail.com"
+                className="text-2xl font-bold hover:text-yellow-300 transition-colors inline-flex items-center gap-2"
+              >
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                takaocybercorner@gmail.com
+              </a>
+            </div>
+
+            <p className="text-sm opacity-90">
+              我們會盡快回覆您的詢問
+              <br />
+              We'll respond to your inquiry as soon as possible
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      {/* Footer */}
+      <footer className="py-8 text-center text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-700">
+        <p className="text-sm">
+          © 2025 Takao Cyber Corner | 高雄賽博角落
+        </p>
+      </footer>
     </main>
   )
 }
