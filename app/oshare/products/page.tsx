@@ -31,6 +31,7 @@ export default function ProductGrid() {
     const [loading, setLoading] = useState(true);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [selectedTitle, setSelectedTitle] = useState<string>('');
+    const [selectedSlug, setSelectedSlug] = useState<string>('');
 
     useEffect(() => {
         // Fetch products from API route
@@ -46,9 +47,10 @@ export default function ProductGrid() {
             });
     }, []);
 
-    const handleImageClick = (image: string, title: string) => {
+    const handleImageClick = (image: string, title: string, slug: string) => {
         setSelectedImage(image);
         setSelectedTitle(title);
+        setSelectedSlug(slug);
         // Prevent body scroll when modal is open
         document.body.style.overflow = 'hidden';
     };
@@ -56,6 +58,7 @@ export default function ProductGrid() {
     const closeModal = () => {
         setSelectedImage(null);
         setSelectedTitle('');
+        setSelectedSlug('');
         // Re-enable body scroll
         document.body.style.overflow = 'auto';
     };
@@ -96,7 +99,7 @@ export default function ProductGrid() {
                         <div
                             key={product.slug}
                             className="group cursor-pointer"
-                            onClick={() => product.heroImage && handleImageClick(product.heroImage, product.title)}
+                            onClick={() => product.heroImage && handleImageClick(product.heroImage, product.title, product.slug)}
                         >
                             {/* Product Image */}
                             <div className="bg-gray-100 rounded-lg overflow-hidden aspect-square mb-3">
@@ -167,10 +170,18 @@ export default function ProductGrid() {
                                 className="w-full h-auto max-h-[80vh] object-contain"
                             />
                             {selectedTitle && (
-                                <div className="p-4 sm:p-6 bg-white">
+                                <div className="p-4 sm:p-6 bg-white flex justify-between items-center">
                                     <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
                                         {selectedTitle}
                                     </h2>
+                                    {selectedSlug && (
+                                        <a
+                                            href={`/oshare/${selectedSlug}`}
+                                            className="text-sm sm:text-base text-blue-600 hover:text-blue-800 hover:underline transition-colors whitespace-nowrap ml-4"
+                                        >
+                                            查看產品詳情 ➡️
+                                        </a>
+                                    )}
                                 </div>
                             )}
                         </div>
