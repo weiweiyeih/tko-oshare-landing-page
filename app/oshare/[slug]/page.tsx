@@ -114,6 +114,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                         <div>
                             <a
                                 href={page.ctaLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white rounded-full transition-all duration-200 hover:opacity-90"
                                 style={{ backgroundColor: buttonColor }}
                             >
@@ -240,6 +242,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 <div className="text-center space-y-6">
                     <a
                         href={page.ctaLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white rounded-full transition-all duration-200 hover:opacity-90"
                         style={{ backgroundColor: buttonColor }}
                     >

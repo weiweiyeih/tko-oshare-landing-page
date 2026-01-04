@@ -188,6 +188,33 @@ export default function ProductGrid() {
                     </div>
                 </div>
             )}
+
+            {/* Bottom CTA Section */}
+            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+                <div className="text-center space-y-6">
+                    <a
+                        href="https://line.me/R/ti/p/@014wgqai"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white rounded-full transition-all duration-200 hover:opacity-90"
+                        style={{ backgroundColor: '#15803d' }}
+                    >
+                        透過官方 Line 聯絡我們
+                    </a>
+
+                    {/* QR Code */}
+                    <div className="flex flex-col items-center space-y-2">
+                        <div className="w-32 h-32 rounded-lg overflow-hidden">
+                            <img
+                                src="/L_oshare_2dbarcodes_BW.png"
+                                alt="官方 LINE QR CODE"
+                                className="w-full h-full object-contain"
+                            />
+                        </div>
+                        <p className="text-sm text-gray-600">官方 LINE ID: @014wgqai</p>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }
